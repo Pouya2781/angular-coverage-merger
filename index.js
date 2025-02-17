@@ -55,10 +55,11 @@ function convertCoverageDataLinestoData(dataLines) {
 
 async function main() {
     const coveragetFolderRelativePath = process.argv[2] ?? './coverage';
-    const lcovPaths = await globby(`${coveragetFolderRelativePath}/**/lcov.info`);
-    console.log('files', lcovPaths)
+    const lcovPaths = await globby(`${coveragetFolderRelativePath}/**/**/lcov.info`);
+    const lcovValidPaths = lcovPaths.filter(lcovPath => lcovPath !== `${coveragetFolderRelativePath}/lcov.info`);
+    console.log('files', lcovValidPaths)
 
-    const coverageDatum = await Promise.all(lcovPaths.map(lcovPath => readFileRelative(lcovPath)))
+    const coverageDatum = await Promise.all(lcovValidPaths.map(lcovPath => readFileRelative(lcovPath)))
 
     const coverageDataLines = coverageDatum.map(coverageData => normalizeCoverageDataLines(convertCoverageDataToLineArray(coverageData)))
     const mergedCoverageDataLines = mergeNormalizedCoverageDataLines(coverageDataLines);
