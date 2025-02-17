@@ -56,6 +56,7 @@ function convertCoverageDataLinestoData(dataLines) {
 async function main() {
     const coveragetFolderRelativePath = process.argv[2] ?? './coverage';
     const lcovPaths = await globby(`${coveragetFolderRelativePath}/**/lcov.info`);
+    console.log('files', lcovPaths)
 
     const coverageDatum = await Promise.all(lcovPaths.map(lcovPath => readFileRelative(lcovPath)))
 
