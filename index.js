@@ -27,7 +27,7 @@ function writeFileRelative(relativePath, data) {
 }
 
 function convertCoverageDataToLineArray(data) {
-    return data.split('\r\n');
+    return data.split('\n');
 }
 
 function normalizeCoverageDataLines(dataLines) {
