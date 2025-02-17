@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/env node
 // import fs from 'fs'
 // import {globby} from 'globby'
 
