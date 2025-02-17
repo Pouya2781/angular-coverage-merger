@@ -1,6 +1,6 @@
 {
   "name": "angular-coverage-merger",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "A package for merging lcov.info files for a multi-project angular application into one",
   "main": "index.js",
   "type": "module",
@@ -18,5 +18,11 @@
   },
   "repository": {
     "url": "git+https://github.com/Pouya2781/angular-coverage-merger.git"
-  }
+  },
+  "keys": [
+    "angular",
+    "frontend",
+    "test-coverage",
+    "jasmine"
+  ]
 }
