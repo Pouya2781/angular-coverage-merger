@@ -1,6 +1,6 @@
 {
   "name": "angular-coverage-merger",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "A package for merging lcov.info files for a multi-project angular application into one",
   "main": "index.js",
   "type": "module",
