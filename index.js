@@ -57,10 +57,10 @@ async function main() {
 
     if (verbose) {
         if (lcovValidPaths.length === 0) {
-            console.log(`No coverage file found in: "${coveragetFolderRelativePath}"!`)
+            console.log(`No coverage file found in "${coveragetFolderRelativePath}"!`)
         } else {
             console.log(`Found ${lcovValidPaths.length} coverage files in "${coveragetFolderRelativePath}":`)
-            lcovValidPaths.forEach((lcovValidPath, index) => console.log(`${index + 1}.${lcovValidPath}`))
+            lcovValidPaths.forEach((lcovValidPath, index) => console.log(`${index + 1}. "${lcovValidPath}"`))
         }
     
     }
@@ -70,7 +70,7 @@ async function main() {
 
     writeFileRelative(coveragetOutputRelativePath, mergedData).then(() => {
         if (verbose) {
-            console.log(`Output coverage file has been succesfully stored on "${coveragetOutputRelativePath}"!`)
+            console.log(`Output coverage file has been succesfully stored in "${coveragetOutputRelativePath}"!`)
         }
     }).catch((error) => {
         console.error(error);
