@@ -1,6 +1,6 @@
 {
   "name": "angular-coverage-merger",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "A package for merging lcov.info files for a multi-project angular application into one",
   "main": "index.js",
   "type": "module",
@@ -13,7 +13,8 @@
   "author": "Pouya Sadat Alhosseini",
   "license": "MIT",
   "dependencies": {
-    "globby": "^14.1.0"
+    "globby": "^14.1.0",
+    "yargs": "^17.7.2"
   },
   "repository": {
     "url": "git+https://github.com/Pouya2781/angular-coverage-merger.git"
