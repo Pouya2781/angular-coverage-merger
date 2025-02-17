@@ -60,6 +60,7 @@ async function main() {
     console.log('files', lcovValidPaths)
 
     const coverageDatum = await Promise.all(lcovValidPaths.map(lcovPath => readFileRelative(lcovPath)))
+    console.log('data', coverageDatum);
 
     const coverageDataLines = coverageDatum.map(coverageData => normalizeCoverageDataLines(convertCoverageDataToLineArray(coverageData)))
     const mergedCoverageDataLines = mergeNormalizedCoverageDataLines(coverageDataLines);
